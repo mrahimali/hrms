@@ -13,8 +13,10 @@ from .serializer import EmployeeSerializer
 class EmployeesView(APIView):
 
     def get(self, request):
+        print("Api called")
         employees = Employee.objects.all().order_by('-created_at')
         serializer = EmployeeSerializer(employees, many=True)
+        print("Api success")
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
