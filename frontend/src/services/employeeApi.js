@@ -2,12 +2,12 @@ import apiClient from "./apiClient";
 
 export const employeeApi = {
   getAll: async () => {
-    const res = await apiClient.get("/employees");
+    const res = await apiClient.get("/employees/");
     return res.data;
   },
 
   create: async (data) => {
-    const res = await apiClient.post("/employees", data);
+    const res = await apiClient.post("/employees/", data);
     return res.data;
   },
 
