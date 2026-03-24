@@ -1,0 +1,31 @@
+node_modules/
+build/
+.env
+.DS_Store
+backend/env/
+backend/venv/
+
+# Python
+backend/env/
+backend/venv/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Django static
+backend/staticfiles/
+
+# Node
+frontend/node_modules/
+
+# Environment files
+.env
+frontend/.env
+
+# Build files
+frontend/dist/
+frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db

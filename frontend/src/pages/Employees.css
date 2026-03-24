@@ -1,0 +1,249 @@
+.employees-container {
+  padding: 40px;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.add-btn {
+  background-color: #1e293b;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #334155;
+}
+
+/* ===== FORM ===== */
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.form-card h2 {
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-card input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+  background-color: #16a34a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #15803d;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ===== TABLE ===== */
+.table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Scroll wrapper — table pe display:block nahi */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* display:block NAHI — wrapper handle karta hai */
+}
+
+.employee-table th {
+  background-color: #1e293b;
+  color: white;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.employee-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.employee-table tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.view-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* ===== LARGE TABLET ===== */
+@media (max-width: 1024px) {
+  .employees-container {
+    padding: 30px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .employees-container {
+    padding: 25px;
+  }
+  .form-card {
+    max-width: 100%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .employees-container {
+    padding: 16px;
+  }
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .form-card,
+  .table-card {
+    padding: 18px 14px;
+  }
+  .employee-table th,
+  .employee-table td {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  .action-buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .view-btn,
+  .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .employees-container {
+    padding: 12px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  .form-card input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .submit-btn {
+    font-size: 14px;
+    padding: 9px;
+  }
+  .employee-table th,
+  .employee-table td {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+  .table-card {
+    padding: 14px 10px;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,119 @@
+.dashboard-container {
+  padding: 40px;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  flex: 1;
+  min-width: 220px;
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.dashboard-card p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* ===== CARD COLORS ===== */
+.total   { background: linear-gradient(135deg, #1e293b, #334155); }
+.present { background: linear-gradient(135deg, #16a34a, #22c55e); }
+.absent  { background: linear-gradient(135deg, #dc2626, #ef4444); }
+
+/* ===== HOVER ===== */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 30px;
+  }
+  .dashboard-title {
+    font-size: 24px;
+  }
+  .dashboard-card p {
+    font-size: 32px;
+  }
+}
+
+/* ===== STACK CARDS ===== */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .dashboard-card {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+  .dashboard-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .dashboard-card {
+    padding: 22px 20px;
+  }
+  .dashboard-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .dashboard-card p {
+    font-size: 28px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 14px;
+  }
+  .dashboard-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .dashboard-card {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+  .dashboard-card h3 {
+    font-size: 15px;
+  }
+  .dashboard-card p {
+    font-size: 26px;
+  }
+}
